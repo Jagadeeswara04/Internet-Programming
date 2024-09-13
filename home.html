@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saveetha University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .courses, .departments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .course, .department {
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background-size: cover;
+            color: white;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.5em;
+            border-radius: 10px;
+            position: relative;
+        }
+        .course:hover, .department:hover {
+            opacity: 0.9;
+        }
+        .course-overlay, .department-overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+        }
+
+        /* Background Images for Courses */
+        .cse {
+            background-image: url('https://example.com/cse-background.jpg'); /* Change to actual image URLs */
+        }
+        .ece {
+            background-image: url('https://example.com/ece-background.jpg'); /* Change to actual image URLs */
+        }
+        .ai {
+            background-image: url('https://example.com/ai-background.jpg'); /* Change to actual image URLs */
+        }
+        .eee {
+            background-image: url('https://example.com/eee-background.jpg'); /* Change to actual image URLs */
+        }
+
+        /* Background Images for Departments */
+        .dental {
+            background-image: url('https://example.com/dental-background.jpg'); /* Change to actual image URLs */
+        }
+        .medical {
+            background-image: url('https://example.com/medical-background.jpg'); /* Change to actual image URLs */
+        }
+        .law {
+            background-image: url('https://example.com/law-background.jpg'); /* Change to actual image URLs */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Saveetha University</h1>
+    <p>Explore our Courses and Departments</p>
+</header>
+
+<section>
+    <h2 style="text-align: center;">Courses Offered</h2>
+    <div class="courses">
+        <div class="course cse">
+            <div class="course-overlay">Computer Science & Engineering (CSE)</div>
+        </div>
+        <div class="course ece">
+            <div class="course-overlay">Electronics & Communication Engineering (ECE)</div>
+        </div>
+        <div class="course ai">
+            <div class="course-overlay">Artificial Intelligence (AI)</div>
+        </div>
+        <div class="course eee">
+            <div class="course-overlay">Electrical & Electronics Engineering (EEE)</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 style="text-align: center;">Departments</h2>
+    <div class="departments">
+        <div class="department dental">
+            <div class="department-overlay">Saveetha Dental</div>
+        </div>
+        <div class="department medical">
+            <div class="department-overlay">Saveetha Medical</div>
+        </div>
+        <div class="department law">
+            <div class="department-overlay">Saveetha Law</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Saveetha University | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
