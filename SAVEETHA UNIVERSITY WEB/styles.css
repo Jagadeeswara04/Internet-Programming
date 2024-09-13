@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .contact-info {
+    font-size: 14px;
+}
+
+.top-bar .social-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.top-bar .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+header nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header ul.menu li {
+    display: inline;
+}
+
+header ul.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+header ul.menu li a:hover {
+    color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://assets.onecompiler.app/42q9x745f/42ryaak8n/IMG_20240912_182515_1.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons a {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.cta-buttons .btn.primary {
+    background-color: #007BFF;
+    color: white;
+}
+
+.cta-buttons .btn.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.program-cards {
+    display: flex;
+    justify-content: space-between; /* Optional: Adjust spacing between cards */
+    gap: 20px; /* Optional: Space between each card */
+}
+
+.program-card {
+    flex: 1; /* Ensures all cards have equal width */
+    text-align: center;
+}
+
+.program-card img {
+    width: 100%;
+    max-width: 150px; /* Adjust the image size as needed */
+    height: auto;
+}
+
+.program-card h3, .program-card p {
+    margin: 10px 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

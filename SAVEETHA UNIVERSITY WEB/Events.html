@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Saveetha University</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://assets.onecompiler.app/42q9x745f/3x8w7uvr3/banner-hero04a.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .events-section {
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .events-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filters select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .event-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-item h3 {
+            margin: 0 0 5px;
+        }
+
+        .event-item p {
+            margin: 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="events-section">
+        <h2>Events</h2>
+        <div class="filters">
+            <select id="month-filter">
+                <option value="">Select Month</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select id="year-filter">
+                <option value="">Select Year</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+
+        <div id="events-list">
+            <!-- Events will be populated here -->
+            <div class="event-item" data-date="2023-03-30">
+                <h3>Saveetha University Recently conducted Star summit 2024 for above 15,000 poster in one year at only Saveetha School of engineering</h3>
+                <p> 2024</p>
+            </div>
+            <div class="event-item" data-date="2023-03-21">
+                <h3>Saveetha University also conducted a cooking biryani festival at saveetha play ground it makes world record for conducting 3 days</h3>
+                <p> 2024</p>
+            </div>
+            <div class="event-item" data-date="2023-02-28">
+                <h3>The Saveetha university hosted events in This month 2024</h3>
+                <p>2024</p>
+            </div>
+            <!-- More event items... -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const monthFilter = document.getElementById('month-filter');
+            const yearFilter = document.getElementById('year-filter');
+            const eventsList = document.getElementById('events-list');
+            
+            function filterEvents() {
+                const month = monthFilter.value;
+                const year = yearFilter.value;
+                const eventItems = eventsList.querySelectorAll('.event-item');
+                
+                eventItems.forEach(item => {
+                    const date = new Date(item.getAttribute('data-date'));
+                    const eventMonth = String(date.getMonth() + 1).padStart(2, '0');
+                    const eventYear = date.getFullYear();
+                    
+                    if ((month === '' || month === eventMonth) && (year === '' || year === eventYear.toString())) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            monthFilter.addEventListener('change', filterEvents);
+            yearFilter.addEventListener('change', filterEvents);
+        });
+    </script>
+
+</body>
+</html>

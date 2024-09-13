@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Saveetha University</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Inline CSS for this example, move to styles.css in production */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://assets.onecompiler.app/42q9x745f/3x8w7uvr3/Saveetha-Engineering-College-Chennai-(5)%20(2).png'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .register-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .register-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .register-container input[type="text"], 
+        .register-container input[type="email"], 
+        .register-container input[type="password"],
+        .register-container select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .register-container button {
+            background-color: #0048a7;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .register-container button:hover {
+            background-color: #00377d;
+        }
+
+        .register-container .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Create Your Account</h2>
+        <form action="welcome.html" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+            
+            <label for="course">Select a Course</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select your course</option>
+                <option value="btech">B.Tech Program</option>
+                <option value="bba">BBA Program</option>
+                <option value="mba">MBA Program</option>
+                <option value="law">Law Program</option>
+            </select>
+            
+            <button type="submit">Register</button>
+
+            <a href="login.html" class="login-link">Already have an account? Login</a>
+        </form>
+    </div>
+
+</body>
+</html>
